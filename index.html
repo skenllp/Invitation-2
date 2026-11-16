@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dr. Meersa & Dr. Jashida · Dr. Sharshad & Dr. Thasneem — 30 December 2026</title>
+<meta name="description" content="You are cordially invited to two weddings on Wednesday, 30 December 2026, 4:00 PM to 8:00 PM, Rozia International Convention Centre, Kondotty.">
+<meta property="og:title" content="Two beautiful unions · 30 December 2026">
+<meta property="og:description" content="Dr. Meersa & Dr. Jashida · Dr. Sharshad & Dr. Thasneem — Rozia International Convention Centre, Kondotty">
+<meta property="og:image" content="a/curtain.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--ruby:#8b1a2b;--wine:#5a0f1f;--ink:#1a0408;--blush:#e8b4b8;--ivory:#f5efe6;--gold:#d4af7a;--script:'Great Vibes',cursive;--serif:'Cormorant Garamond',Georgia,serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--ivory);font:400 18px/1.55 var(--serif);text-align:center;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden;height:100svh}
+section{position:relative;padding:72px 24px;overflow:hidden}
+h2{font:400 clamp(40px,11vw,58px)/1.1 var(--script);color:#fff}
+.cur{background:linear-gradient(#1a040888,#1a0408cc),url(a/curtain.jpg) center/cover}
+.silk{background:linear-gradient(#1a040855,#1a0408aa),url(a/silk.jpg) center/cover}
+.ivory{background:var(--ivory);color:var(--wine)}
+.ivory h2{color:var(--ruby)}
+.lace{height:64px;margin:-32px 0;position:relative;z-index:5;background:url(a/lace.webp) repeat-x center/auto 100%;filter:drop-shadow(0 2px 6px #0006)}
+.sm{font-style:italic;color:var(--blush);font-size:17px}
+.gold{background:linear-gradient(#e9cf9b,#c79d5c);color:#3b1a12;border:0;border-radius:40px;padding:13px 30px;font:600 16px var(--serif);text-decoration:none;display:inline-block;cursor:pointer;box-shadow:0 6px 18px #0007}
+.rv{opacity:0;transform:translateY(18px);transition:opacity 1s,transform 1s}.rv.in{opacity:1;transform:none}
+
+/* tap-to-open cover */
+#cover{position:fixed;inset:0;z-index:50;background:linear-gradient(#1a040877,#1a0408dd),url(a/curtain.jpg) center/cover;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;padding:48px 24px;transition:opacity 1.4s;cursor:pointer}
+#cover p{text-shadow:0 2px 12px #000}
+#cover .t{font:italic 22px var(--serif);color:var(--blush)}
+#cover .b{font:400 clamp(44px,13vw,64px)/1.1 var(--script);color:#fff;text-shadow:0 2px 16px #000}
+#cover .gold{margin-top:26px;animation:pulse 2.4s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 12px #d4af7a22,0 6px 18px #0007}}
+#cover.gone{opacity:0;pointer-events:none}
+
+/* hero */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;gap:6px;padding-top:56px}
+#hero .beam{position:absolute;top:-10%;left:12%;width:60%;height:120%;background:linear-gradient(100deg,#f3a6b433,transparent 70%);transform:skewX(-14deg);filter:blur(10px);pointer-events:none}
+#hero canvas,#end canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#hero>*:not(canvas):not(.beam){position:relative}
+.bis{font:400 34px/1.4 'Amiri',serif;color:var(--gold)}
+.nm{font:400 clamp(46px,14vw,70px)/1.05 var(--script);color:#fff;text-shadow:0 2px 20px #000a}
+.wd{font-style:italic;color:var(--gold);letter-spacing:.08em;font-size:19px}
+.orn{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:16px auto}
+.when{margin-top:10px;font-size:20px;letter-spacing:.14em;color:var(--blush)}
+
+/* envelope */
+#env{padding-bottom:90px}
+.env{--W:min(86vw,420px);position:relative;width:var(--W);height:calc(var(--W)*.941);margin:calc(var(--W)*.5) auto 0;cursor:pointer;transition:margin-bottom 1s}
+.env.open{margin-bottom:calc(var(--W)*.3)}
+.env img{position:absolute;display:block}
+.env .bk{inset:0;width:100%;height:100%}
+.env .pk{left:12%;top:44.5%;width:75.2%;z-index:3}
+.card{position:absolute;left:17%;top:52%;width:66%;z-index:2;transition:transform 1.3s cubic-bezier(.2,.8,.2,1);font-size:calc(var(--W)*.03);color:var(--wine)}
+.card img{position:static;width:100%}
+.card div{position:absolute;inset:11% 12% 9%;display:flex;flex-direction:column;justify-content:center;gap:.5em}
+.card h3{font:400 2.5em/1 var(--script);color:var(--ruby)}
+.card p{font-size:1.08em;line-height:1.35}
+.env.open .card{transform:translateY(-62%) scale(1.42);z-index:4}
+.hint{margin-top:34px;font-style:italic;color:var(--blush);transition:opacity .6s}
+.env.open+.hint{opacity:0}
+
+/* calendar */
+#cal-wrap{position:relative;width:min(300px,78vw);margin:30px auto 0}
+#cal{background:var(--ivory);color:var(--wine);border-radius:3px;padding:16px 14px 18px;box-shadow:0 12px 40px #000a;transition:transform .55s,opacity .55s}
+#cal.flip{transform:rotateX(75deg);opacity:.2}
+#cal .mo{font:400 30px var(--serif);letter-spacing:.12em}
+#cal .yr{font-size:12px;color:var(--ruby);letter-spacing:.3em}
+#cal .g{display:grid;grid-template-columns:repeat(7,1fr);gap:4px 0;margin-top:12px;font-size:15px}
+#cal .g b{font-weight:400;font-size:11px;opacity:.5}
+#cal .g i{font-style:normal;height:26px;line-height:26px;position:relative}
+#cal .g i.on:after{content:"";position:absolute;left:-2px;right:-2px;top:0;bottom:0;border:1.5px solid var(--ruby);border-radius:50%;transform:scale(0);animation:ring .6s .3s forwards}
+@keyframes ring{to{transform:scale(1.15)}}
+#cal-wrap img{position:absolute;left:-52px;top:78px;width:80px;pointer-events:none;filter:drop-shadow(0 6px 8px #000a)}
+.dt{font:400 27px var(--serif);margin-top:26px;color:var(--gold)}
+
+/* ivory details */
+.panel{max-width:420px;margin:30px auto 0;padding:74px 40px;background:url(a/frame.jpg) center/100% 100% no-repeat;box-shadow:0 10px 30px #0003}
+.panel h3{font:400 38px var(--script);color:var(--ruby)}
+.panel p{margin-top:4px}
+.panel .big{font-size:24px;font-weight:600;line-height:1.25;margin-top:10px}
+.panel hr{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px 0}
+
+/* venue */
+.arch{width:min(250px,70vw);aspect-ratio:3/4;margin:26px auto 22px;border-radius:999px 999px 8px 8px;border:1px solid #d4af7a77;padding:6px;background:linear-gradient(#e8b4b822,#5a0f1f55)}
+.arch img{display:block;width:100%;height:100%;object-fit:cover;object-position:58% 50%;border-radius:999px 999px 4px 4px}
+.venue{font:400 25px var(--serif);letter-spacing:.06em}
+iframe{display:block;width:min(300px,82vw);height:180px;border:0;border-radius:6px;margin:22px auto 0;filter:sepia(.5) hue-rotate(300deg) saturate(.8)}
+
+/* countdown */
+#end{min-height:100svh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(#1a040877,#1a0408dd),url(a/curtain.jpg) center/cover}
+#end>*:not(canvas){position:relative}
+.cd{display:flex;justify-content:center;gap:10px;margin:26px 0 30px;font-size:42px;color:var(--gold);line-height:1}
+.cd span small{display:block;font-size:12px;color:var(--blush);margin-top:6px}
+.cd em{font-style:normal;opacity:.6}
+.sign{font-size:15px;color:var(--blush);letter-spacing:.1em}
+.sign b{display:block;font:400 24px var(--serif);color:#fff;margin-top:4px;letter-spacing:.04em}
+#bar{position:fixed;left:0;right:0;bottom:0;padding:12px 24px calc(12px + env(safe-area-inset-bottom));z-index:20;background:linear-gradient(transparent,#1a0408cc);transition:opacity .6s;opacity:0;pointer-events:none}
+#bar.show{opacity:1;pointer-events:auto}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body class="lock">
+
+<div id="cover" role="button" tabindex="0" aria-label="Open the invitation">
+  <div class="bis" style="font-size:36px">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <p class="t">You are cordially invited</p>
+  <p class="b">Two beautiful unions</p>
+  <button class="gold" type="button">Tap to open</button>
+</div>
+
+<section id="hero" class="cur">
+  <div class="beam"></div><canvas></canvas>
+  <div class="bis rv">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+  <p class="sm rv">Together with their families</p>
+  <div class="rv"><div class="nm">Dr. Meersa</div><div class="wd">weds</div><div class="nm">Dr. Jashida</div></div>
+  <div class="orn"></div>
+  <div class="rv"><div class="nm">Dr. Sharshad</div><div class="wd">weds</div><div class="nm">Dr. Thasneem</div></div>
+  <p class="sm rv" style="margin-top:14px">invite you to celebrate their weddings</p>
+  <p class="when rv">30 · 12 · 2026</p>
+  <p class="sm rv">Rozia International Convention Centre, Kondotty</p>
+</section>
+
+<section id="env" class="silk">
+  <h2 class="rv">Dear family and friends</h2>
+  <div class="env" id="envelope" role="button" tabindex="0" aria-label="Open the envelope">
+    <img class="bk" src="a/env.webp" alt="">
+    <div class="card"><img src="a/card.webp" alt="">
+      <div><h3>Assalamu Alaikum</h3><p>It is with great pleasure that our family invites you to join us in celebrating two beautiful unions and sharing in the joy of this memorable occasion.</p></div>
+    </div>
+    <img class="pk" src="a/pocket.webp" alt="">
+  </div>
+  <p class="hint">Tap the envelope to open</p>
+</section>
+
+<div class="lace"></div>
+<section id="sd" style="background:var(--ink);padding-top:90px">
+  <h2 class="rv">Save the date</h2>
+  <p class="sm rv">Turn the pages to our day</p>
+  <div id="cal-wrap"><div id="cal"></div><img src="a/pearl.webp" alt=""></div>
+  <p class="dt rv">Wednesday, 30 December 2026</p>
+  <p class="sm rv">4:00 PM to 8:00 PM</p>
+  <p class="rv" style="margin-top:22px"><a class="gold" id="ics" download="wedding-invitation.ics" href="#">Add to my calendar</a></p>
+</section>
+
+<div class="lace"></div>
+<section class="ivory" style="padding-top:90px;padding-bottom:90px">
+  <h2 class="rv">The celebration</h2>
+  <div class="panel rv">
+    <h3>Two weddings</h3>
+    <p class="big">Dr. Meersa weds Dr. Jashida</p>
+    <p class="big">Dr. Sharshad weds Dr. Thasneem</p>
+    <hr>
+    <p>Wednesday, 30 December 2026</p>
+    <p>4:00 PM to 8:00 PM</p>
+    <hr>
+    <p>Your gracious presence and blessings will be deeply cherished as we celebrate this special occasion together.</p>
+  </div>
+</section>
+
+<div class="lace"></div>
+<section id="where" style="background:var(--ink);padding-top:90px">
+  <h2 class="rv">Where</h2>
+  <div class="arch rv"><img src="a/venue.jpg" alt="Rozia International Convention Centre, Kondotty"></div>
+  <p class="venue rv">Rozia International<br>Convention Centre</p>
+  <p class="sm rv">Kondotty</p>
+  <p class="rv" style="margin-top:20px"><a class="gold" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rozia+International+Convention+Centre+Kondotty">Get directions</a></p>
+  <iframe class="rv" title="Map" loading="lazy" src="https://maps.google.com/maps?q=Rozia+International+Convention+Centre+Kondotty&output=embed"></iframe>
+</section>
+
+<section id="end">
+  <canvas></canvas>
+  <h2 class="rv">Until we meet</h2>
+  <div class="cd rv"><span id="d">0<small>days</small></span><em>:</em><span id="h">0<small>hours</small></span><em>:</em><span id="m">0<small>minutes</small></span></div>
+  <p class="sign rv">With warm regards,<b>Mansoor (EMC Hospital) &amp; Family</b></p>
+</section>
+
+<div id="bar"><a class="gold" style="display:block;max-width:420px;margin:auto" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Rozia+International+Convention+Centre+Kondotty">Get directions</a></div>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s), RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* tap to open */
+const cov=$('#cover');let done=false;
+function reveal(){if(done)return;done=true;cov.classList.add('gone');document.body.classList.remove('lock');setTimeout(()=>cov.remove(),1500);
+  document.querySelectorAll('#hero .rv').forEach((e,i)=>setTimeout(()=>e.classList.add('in'),300+i*350))}
+cov.addEventListener('click',reveal);
+cov.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();reveal()}});
+if(RM)reveal();
+
+/* sparkles */
+function sparkle(c){const q=c.getContext('2d');let w,h,p=[];
+  const fit=()=>{w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;p=Array.from({length:55},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.4,v:Math.random()*.25+.08,a:Math.random()*6}))};fit();addEventListener('resize',fit);
+  (function f(t){q.clearRect(0,0,w,h);for(const s of p){s.y-=s.v;s.x+=Math.sin(t/2000+s.a)*.15;if(s.y<-5)s.y=h+5;q.globalAlpha=.35+.5*Math.sin(t/500+s.a)**2;q.fillStyle='#f3d9b0';q.beginPath();q.arc(s.x,s.y,s.r,0,7);q.fill()}requestAnimationFrame(f)})(0)}
+if(!RM)document.querySelectorAll('canvas').forEach(sparkle);
+
+/* envelope */
+const env=$('#envelope');const open=()=>env.classList.add('open');
+env.addEventListener('click',open);env.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}});
+
+/* calendar flip: Oct > Nov > Dec 2026 */
+const cal=$('#cal'),MN=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function draw(m,mark){const first=(new Date(2026,m,1).getDay()+6)%7,n=new Date(2026,m+1,0).getDate();
+  let g='';'MTWTFSS'.split('').forEach(d=>g+=`<b>${d}</b>`);for(let i=0;i<first;i++)g+='<i></i>';
+  for(let i=1;i<=n;i++)g+=`<i${mark&&i===30?' class="on"':''}>${i}</i>`;
+  cal.innerHTML=`<div class="mo">${MN[m]}</div><div class="yr">2026</div><div class="g">${g}</div>`}
+draw(9);let ran=false;
+function run(){if(ran)return;ran=true;[[10,1300],[11,2600]].forEach(([m,t])=>setTimeout(()=>{cal.classList.add('flip');setTimeout(()=>{draw(m,m===11);cal.classList.remove('flip')},450)},t))}
+
+/* add to calendar */
+$('#ics').href='data:text/calendar;charset=utf-8,'+encodeURIComponent('BEGIN:VCALENDAR\r\nVERSION:2.0\r\nBEGIN:VEVENT\r\nDTSTART:20261230T103000Z\r\nDTEND:20261230T143000Z\r\nSUMMARY:Wedding celebration - Dr. Meersa & Dr. Jashida, Dr. Sharshad & Dr. Thasneem\r\nLOCATION:Rozia International Convention Centre, Kondotty\r\nEND:VEVENT\r\nEND:VCALENDAR');
+
+/* countdown to 30 Dec 2026, 4:00 PM IST */
+const T=Date.parse('2026-12-30T16:00:00+05:30');
+function cd(){let s=Math.max(0,(T-Date.now())/1000|0);const f=(id,v,l)=>$(id).innerHTML=v+`<small>${l}</small>`;f('#d',s/86400|0,'days');f('#h',s%86400/3600|0,'hours');f('#m',s%3600/60|0,'minutes')}
+cd();setInterval(cd,20000);
+
+/* reveals + sticky button */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.id==='cal-wrap')run()}}),{threshold:.25});
+document.querySelectorAll('.rv:not(#hero .rv),#cal-wrap').forEach(e=>io.observe(e));
+const bar=$('#bar');addEventListener('scroll',()=>bar.classList.toggle('show',scrollY>innerHeight*1.4&&scrollY+innerHeight<document.body.scrollHeight-innerHeight*.6),{passive:true});
+})();
+</script>
+</body>
+</html>
