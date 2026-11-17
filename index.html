@@ -53,17 +53,18 @@ h2{font:400 clamp(40px,11vw,58px)/1.1 var(--script);color:#fff}
 /* hero: video background */
 #hero{height:100svh;min-height:600px;padding:0;background:#2a0610;display:flex;justify-content:center}
 .vcol{position:absolute;inset:0}
-#hv{display:block;width:100%;height:100%;object-fit:cover}
-@media(min-aspect-ratio:1/1){.vcol{inset:0 auto 0 50%;width:calc(100svh*.5625);transform:translateX(-50%)}}
-#hero .shade{position:absolute;inset:0;background:linear-gradient(#1a0408ee 0%,#1a0408aa 22%,#1a040800 42%,#1a040800 70%,#1a0408ee 100%)}
-.hin{position:relative;z-index:2;width:100%;max-width:min(480px,calc(100svh*.5625));height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:calc(30px + env(safe-area-inset-top)) 18px calc(30px + env(safe-area-inset-bottom))}
-.bis{font:400 32px/1.35 'Amiri',serif;color:var(--gold)}
-.cp{margin-top:6px}
-.nm{font:400 clamp(32px,9vw,40px)/1.12 var(--script);color:#fff;text-shadow:0 2px 14px #000,0 0 3px #0008}
-.wd{font-style:italic;color:var(--gold);letter-spacing:.14em;font-size:16px;line-height:1.5;text-shadow:0 1px 8px #000}
-.orn{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:14px auto}
-.when{margin-top:6px;font-size:20px;letter-spacing:.14em;color:#fff;text-shadow:0 2px 12px #000}
-#hero .sm{text-shadow:0 2px 10px #000}
+.vbox{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,calc(100svh*.5625));aspect-ratio:9/16;container-type:inline-size}
+#hv{display:block;width:100%;height:100%;object-fit:contain;background:#2a0610}
+/* names written on the opened parchment */
+#hero .hin{position:absolute;z-index:2;left:11%;right:11%;top:35.5%;bottom:28.5%;display:flex;flex-direction:column;justify-content:space-between;align-items:center}
+#hero .bis{font-size:6cqw;line-height:1.3;color:#9a6b2f}
+#hero .sm{font-size:3.2cqw;line-height:1.3;color:#7a3a3f}
+#hero .cp{margin-top:0}
+#hero .nm{font-size:6cqw;line-height:1.1;color:var(--wine);text-shadow:none}
+#hero .wd{font-size:2.6cqw;line-height:1.4;letter-spacing:.14em;color:#9a6b2f;text-shadow:none}
+#hero .orn{width:30cqw;height:1.5px;flex:none;margin:0;background:linear-gradient(90deg,transparent,#b8893f,transparent)}
+#hero .when{font-size:4cqw;margin:0;letter-spacing:.14em;color:var(--ruby);text-shadow:none}
+#hero .ven{font-size:2.9cqw;white-space:nowrap;line-height:1.3;color:#7a3a3f}
 
 /* envelope */
 .env{--W:min(86vw,420px);position:relative;width:var(--W);height:calc(var(--W)*.941);margin:28px auto 0;cursor:pointer;-webkit-tap-highlight-color:transparent}
@@ -138,22 +139,19 @@ iframe{display:block;width:min(340px,88vw);height:190px;border:0;border-radius:6
 <button id="snd" type="button" aria-pressed="false" aria-label="Mute music"><svg class="on" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg><svg class="off" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg></button>
 
 <section id="hero">
-  <div class="vcol"><video id="hv" muted loop playsinline webkit-playsinline preload="auto" poster="a/waltz-poster.jpg" aria-hidden="true"><source src="a/waltz-intro.mp4" type="video/mp4"></video></div>
-  <div class="shade"></div>
-  <div class="hin">
-    <div>
+  <div class="vcol"><div class="vbox">
+    <video id="hv" muted playsinline webkit-playsinline preload="auto" poster="a/islamic-poster.jpg" aria-hidden="true"><source src="a/islamic-opening.mp4" type="video/mp4"></video>
+    <div class="hin">
       <div class="bis rv">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
       <p class="sm rv">Together with their families</p>
       <div class="cp rv"><div class="nm">Dr. Meersa</div><div class="wd">weds</div><div class="nm">Dr. Jashida</div></div>
       <div class="orn"></div>
       <div class="cp rv"><div class="nm">Dr. Sharshad</div><div class="wd">weds</div><div class="nm">Dr. Thasneem</div></div>
-    </div>
-    <div>
       <p class="sm rv">invite you to celebrate their weddings</p>
       <p class="when rv">30 · 12 · 2026</p>
-      <p class="sm rv">Rozia International Convention Centre, Kondotty</p>
+      <p class="sm ven rv">Rozia International Convention Centre, Kondotty</p>
     </div>
-  </div>
+  </div></div>
 </section>
 
 <section id="env" class="silk">
@@ -234,9 +232,17 @@ function music(){au.volume=0;const p=au.play();if(p&&p.catch)p.catch(()=>{muted=
 snd.addEventListener('click',()=>{muted=!muted;if(muted)au.pause();else{au.volume=.7;au.play().catch(()=>{})}sync()});
 document.addEventListener('visibilitychange',()=>{if(!done)return;if(document.hidden)au.pause();else if(!muted)au.play().catch(()=>{})});
 const cov=$('#cover'),hv=$('#hv');let done=false;
-const pl=()=>{if(RM)return;const p=hv.play();if(p&&p.catch)p.catch(()=>{})};
-function reveal(){if(done)return;done=true;cov.classList.add('gone');music();document.body.classList.remove('lock');setTimeout(()=>cov.remove(),1500);pl();
-  document.querySelectorAll('#hero .rv').forEach((e,i)=>setTimeout(()=>e.classList.add('in'),500+i*320))}
+let fin=false,vt;
+function finish(){if(fin)return;fin=true;clearTimeout(vt);hero.classList.add('fin');
+  if(!hv.ended){hv.pause();hv.poster='a/islamic-end.jpg';try{if(hv.duration)hv.currentTime=hv.duration-.05}catch(e){}}
+  document.querySelectorAll('#hero .rv').forEach((e,i)=>setTimeout(()=>e.classList.add('in'),(RM?0:500)+i*320))}
+const hero=$('#hero');
+const pl=()=>{if(RM||fin||hv.ended)return;const p=hv.play();if(p&&p.catch)p.catch(()=>finish())};
+hv.addEventListener('ended',()=>{clearTimeout(vt);vt=setTimeout(finish,1000)});
+hv.addEventListener('error',finish);
+if(RM)hv.poster='a/islamic-end.jpg';
+hv.addEventListener('playing',()=>{clearTimeout(vt);vt=setTimeout(finish,(hv.duration||8)*1000+4000)});
+function reveal(){if(done)return;done=true;cov.classList.add('gone');music();document.body.classList.remove('lock');setTimeout(()=>cov.remove(),1500);if(RM)finish();else{pl();vt=setTimeout(finish,9000)}}
 cov.addEventListener('click',reveal);
 cov.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();reveal()}});
 new IntersectionObserver(es=>es.forEach(e=>{if(!done)return;e.isIntersecting?pl():hv.pause()}),{threshold:.1}).observe($('#hero'));
