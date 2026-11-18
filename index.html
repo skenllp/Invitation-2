@@ -51,19 +51,24 @@ h2{font:400 clamp(40px,11vw,58px)/1.1 var(--script);color:#fff}
 #cover:focus-visible,.env:focus-visible{outline:2px solid var(--gold);outline-offset:-6px}
 
 /* hero: video background */
-#hero{height:100svh;min-height:600px;padding:0;background:#2a0610;display:flex;justify-content:center}
+#hero{height:100svh;min-height:600px;padding:0;background:#2a0610;display:flex;justify-content:center;position:relative}
 .vcol{position:absolute;inset:0}
 .vbox{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,calc(100svh*.5625));aspect-ratio:9/16;container-type:inline-size}
 #hv{display:block;width:100%;height:100%;object-fit:contain;background:#2a0610}
+.scroll-down{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:10;width:40px;height:40px;color:#d4af7a;opacity:0;animation:fadeInBounce 1s 2s forwards,bounce 2s 3s infinite;pointer-events:none}
+.scroll-down svg{width:100%;height:100%;filter:drop-shadow(0 2px 4px #000)}
+@keyframes fadeInBounce{to{opacity:.9}}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-10px)}}
 /* names written on the opened parchment */
 #hero .hin{position:absolute;z-index:2;left:11%;right:11%;top:35.5%;bottom:28.5%;display:flex;flex-direction:column;justify-content:space-between;align-items:center}
-#hero .bis{font-size:6cqw;line-height:1.3;color:#9a6b2f}
-#hero .sm{font-size:3.2cqw;line-height:1.3;color:#7a3a3f}
-#hero .cp{margin-top:0}
-#hero .nm{font-size:6cqw;line-height:1.1;color:var(--wine);text-shadow:none}
+#hero .bis{font-size:5.5cqw;line-height:1.3;color:#9a6b2f;margin-bottom:1cqw}
+#hero .sm{font-size:3.2cqw;line-height:1.3;color:#7a3a3f;font-style:italic}
+#hero .cp{margin-top:0;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:2cqw;flex-wrap:wrap}
+#hero .nm{font-size:6.2cqw;line-height:1.1;color:var(--wine);text-shadow:none;white-space:nowrap;font-weight:600}
+#hero .amp{font-size:5.5cqw;color:#b8893f;font-family:var(--script);font-weight:400}
 #hero .wd{font-size:2.6cqw;line-height:1.4;letter-spacing:.14em;color:#9a6b2f;text-shadow:none}
-#hero .orn{width:30cqw;height:1.5px;flex:none;margin:0;background:linear-gradient(90deg,transparent,#b8893f,transparent)}
-#hero .when{font-size:4cqw;margin:0;letter-spacing:.14em;color:var(--ruby);text-shadow:none}
+#hero .orn{width:30cqw;height:1.5px;flex:none;margin:1.5cqw 0;background:linear-gradient(90deg,transparent,#b8893f,transparent)}
+#hero .when{font-size:4.2cqw;margin:0;letter-spacing:.14em;color:var(--ruby);text-shadow:none;font-weight:600}
 #hero .ven{font-size:2.9cqw;white-space:nowrap;line-height:1.3;color:#7a3a3f}
 
 /* envelope */
@@ -102,7 +107,9 @@ h2{font:400 clamp(40px,11vw,58px)/1.1 var(--script);color:#fff}
 .panel{max-width:420px;margin:30px auto 0;padding:74px 40px;background:url(a/frame.jpg) center/100% 100% no-repeat;box-shadow:0 10px 30px #0003}
 .panel h3{font:400 38px var(--script);color:var(--ruby)}
 .panel p{margin-top:4px}
-.panel .big{font-size:24px;font-weight:600;line-height:1.25;margin-top:10px}
+.panel strong{font-weight:700;color:var(--ruby)}
+.panel .big{font-size:clamp(20px,5.5vw,26px);font-weight:600;line-height:1.3;margin-top:10px;white-space:nowrap}
+.panel .amp-panel{font-family:var(--script);color:var(--gold);font-size:1.15em;font-weight:400}
 .panel hr{border:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px 0}
 
 /* venue */
@@ -115,14 +122,20 @@ h2{font:400 clamp(40px,11vw,58px)/1.1 var(--script);color:#fff}
 iframe{display:block;width:min(340px,88vw);height:190px;border:0;border-radius:6px;margin:0 auto;filter:sepia(.5) hue-rotate(300deg) saturate(.8)}
 
 /* countdown */
-#end{min-height:100svh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(#1a040877,#1a0408dd),url(a/curtain.jpg) center/cover}
+#end{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:20px;background:linear-gradient(#1a040877,#1a0408dd),url(a/curtain.jpg) center/cover;padding:60px 24px}
 #end>*:not(canvas){position:relative}
+#end .bis{font-size:clamp(24px,7vw,36px);color:#d4af7a;text-shadow:0 2px 8px #0008}
+#end .cp{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(12px,3vw,20px);flex-wrap:wrap;margin:8px 0}
+#end .nm{font-size:clamp(24px,6vw,38px);line-height:1.2;color:#fff;font-weight:600;text-shadow:0 2px 12px #000;white-space:nowrap}
+#end .amp{font-size:clamp(28px,7vw,44px);color:#d4af7a;font-family:var(--script);text-shadow:0 2px 10px #0008}
+#end .orn{width:min(200px,60vw);height:2px;background:linear-gradient(90deg,transparent,#d4af7a,transparent);margin:12px 0}
+#end .sm{font-size:17px;color:var(--blush);line-height:1.6;text-shadow:0 1px 6px #000;max-width:420px;margin:20px auto 30px!important}
 .cd{display:flex;justify-content:center;gap:8px;margin:26px 0 30px;font-size:clamp(32px,9.4vw,42px);color:var(--gold);line-height:1;font-variant-numeric:tabular-nums}
 .cd span{min-width:1.7em}
 .cd span small{display:block;font-size:12px;color:var(--blush);margin-top:6px}
 .cd em{font-style:normal;opacity:.6}
-.sign{font-size:15px;color:var(--blush);letter-spacing:.1em}
-.sign b{display:block;font:400 24px var(--serif);color:#fff;margin-top:4px;letter-spacing:.04em}
+.sign{font-size:16px;color:var(--blush);letter-spacing:.08em;text-shadow:0 1px 6px #000;margin-top:30px}
+.sign b{display:block;font:600 26px var(--serif);color:#fff;margin-top:8px;letter-spacing:.02em;text-shadow:0 2px 8px #000}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -144,14 +157,27 @@ iframe{display:block;width:min(340px,88vw);height:190px;border:0;border-radius:6
     <div class="hin">
       <div class="bis rv">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
       <p class="sm rv">Together with their families</p>
-      <div class="cp rv"><div class="nm">Dr. Meersa</div><div class="wd">weds</div><div class="nm">Dr. Jashida</div></div>
+      <div class="cp rv">
+        <div class="nm">Dr. Meersa</div>
+        <div class="amp">&</div>
+        <div class="nm">Dr. Jashida</div>
+      </div>
       <div class="orn"></div>
-      <div class="cp rv"><div class="nm">Dr. Sharshad</div><div class="wd">weds</div><div class="nm">Dr. Thasneem</div></div>
+      <div class="cp rv">
+        <div class="nm">Dr. Sharshad</div>
+        <div class="amp">&</div>
+        <div class="nm">Dr. Thasneem</div>
+      </div>
       <p class="sm rv">invite you to celebrate their weddings</p>
       <p class="when rv">30 · 12 · 2026</p>
       <p class="sm ven rv">Rozia International Convention Centre, Kondotty</p>
     </div>
   </div></div>
+  <div class="scroll-down">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
 </section>
 
 <section id="env" class="silk">
@@ -160,14 +186,13 @@ iframe{display:block;width:min(340px,88vw);height:190px;border:0;border-radius:6
     <img class="bk" src="a/env-back.webp" alt="" width="900" height="847">
     <img class="fl" src="a/flap.webp" alt="" width="900" height="375">
     <div class="card"><img src="a/card.webp" alt="" width="900" height="600">
-      <div><h3>Assalamu Alaikum</h3><p>It is with great pleasure that our family invites you to join us in celebrating two beautiful unions and sharing in the joy of this memorable occasion.</p></div>
+      <div><h3>Assalamu Alaikum</h3><p>You are invited to join us in celebrating two beautiful weddings. Your presence will make this day even more special.</p></div>
     </div>
     <img class="pk" src="a/pocket.webp" alt="" width="900" height="600">
   </div>
   <p class="hint">Tap to Open</p>
 </section>
 
-<div class="lace"></div>
 <section id="sd" style="background:var(--ink);padding-top:90px">
   <h2>Save the date</h2>
   <p class="sm">Mark the day</p>
@@ -184,11 +209,11 @@ iframe{display:block;width:min(340px,88vw);height:190px;border:0;border-radius:6
   <h2 class="rv">The celebration</h2>
   <div class="panel rv">
     <h3>Two weddings</h3>
-    <p class="big">Dr. Meersa weds Dr. Jashida</p>
-    <p class="big">Dr. Sharshad weds Dr. Thasneem</p>
+    <p class="big">Dr. Meersa <span class="amp-panel">&</span> Dr. Jashida</p>
+    <p class="big">Dr. Sharshad <span class="amp-panel">&</span> Dr. Thasneem</p>
     <hr>
-    <p>Wednesday, 30 December 2026</p>
-    <p>4:00 PM to 8:00 PM</p>
+    <p><strong></strong>Wednesday, 30 December 2026</strong></p>
+    <p><strong>4:00 PM to 8:00 PM</strong></p>
     <hr>
     <p>Your gracious presence and blessings will be deeply cherished as we celebrate this special occasion together.</p>
   </div>
@@ -210,9 +235,17 @@ iframe{display:block;width:min(340px,88vw);height:190px;border:0;border-radius:6
 <section id="end">
   <canvas></canvas>
   <div class="bis rv" style="font-size:30px">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
-  <div class="cp rv" style="margin-top:18px"><div class="nm">Dr. Meersa</div><div class="wd">weds</div><div class="nm">Dr. Jashida</div></div>
+  <div class="cp rv" style="margin-top:18px">
+    <div class="nm">Dr. Meersa</div>
+    <div class="amp">&</div>
+    <div class="nm">Dr. Jashida</div>
+  </div>
   <div class="orn"></div>
-  <div class="cp rv"><div class="nm">Dr. Sharshad</div><div class="wd">weds</div><div class="nm">Dr. Thasneem</div></div>
+  <div class="cp rv">
+    <div class="nm">Dr. Sharshad</div>
+    <div class="amp">&</div>
+    <div class="nm">Dr. Thasneem</div>
+  </div>
   <div class="orn"></div>
   <p class="sm rv" style="max-width:320px;margin:0 auto 26px">Your gracious presence and blessings will be deeply cherished as we celebrate this special occasion together.</p>
   <p class="sign rv">With warm regards,<b>Mansoor (EMC Hospital)<br>&amp; Family</b></p>
@@ -235,14 +268,14 @@ const cov=$('#cover'),hv=$('#hv');let done=false;
 let fin=false,vt;
 function finish(){if(fin)return;fin=true;clearTimeout(vt);hero.classList.add('fin');
   if(!hv.ended){hv.pause();hv.poster='a/islamic-end.jpg';try{if(hv.duration)hv.currentTime=hv.duration-.05}catch(e){}}
-  document.querySelectorAll('#hero .rv').forEach((e,i)=>setTimeout(()=>e.classList.add('in'),(RM?0:500)+i*320))}
+  document.querySelectorAll('#hero .rv').forEach((e,i)=>setTimeout(()=>e.classList.add('in'),(RM?0:200)+i*180))}
 const hero=$('#hero');
 const pl=()=>{if(RM||fin||hv.ended)return;const p=hv.play();if(p&&p.catch)p.catch(()=>finish())};
-hv.addEventListener('ended',()=>{clearTimeout(vt);vt=setTimeout(finish,1000)});
+hv.addEventListener('ended',()=>{clearTimeout(vt);vt=setTimeout(finish,200)});
 hv.addEventListener('error',finish);
 if(RM)hv.poster='a/islamic-end.jpg';
-hv.addEventListener('playing',()=>{clearTimeout(vt);vt=setTimeout(finish,(hv.duration||8)*1000+4000)});
-function reveal(){if(done)return;done=true;cov.classList.add('gone');music();document.body.classList.remove('lock');setTimeout(()=>cov.remove(),1500);if(RM)finish();else{pl();vt=setTimeout(finish,9000)}}
+hv.addEventListener('playing',()=>{clearTimeout(vt);vt=setTimeout(finish,(hv.duration||8)*1000+500)});
+function reveal(){if(done)return;done=true;cov.classList.add('gone');music();document.body.classList.remove('lock');setTimeout(()=>cov.remove(),1500);if(RM)finish();else{pl();vt=setTimeout(finish,3500)}}
 cov.addEventListener('click',reveal);
 cov.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();reveal()}});
 new IntersectionObserver(es=>es.forEach(e=>{if(!done)return;e.isIntersecting?pl():hv.pause()}),{threshold:.1}).observe($('#hero'));
